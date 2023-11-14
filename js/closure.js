@@ -52,6 +52,8 @@ function task4 () {
       let newArr=mainMenu.wrapperA('Домашняя страница', 'Сервисы', 'Цены', 'О компании');
       console.log(newArr);
       
+      // А здесь просто попробовала передавать значения из массива
+      let newArr2=['Новая страница', 'Проверка страницы', 'SEO-страница'];
       let footerMenu=new Menu("newPage.html","checkPage.html","seoPage.html");
-      console.log(footerMenu.wrapperA('Новая страница', 'Проверка страницы', 'SEO-страница'));     
+      console.log(footerMenu.wrapperA(...newArr2));     
 }
