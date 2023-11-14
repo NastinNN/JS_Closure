@@ -45,12 +45,13 @@ function task4 () {
                 return this.navList.map((elem, i)=>`<a href='${elem}'>${item[i]}</a>`);
             }
         }
-        let mainMenu=new Menu("home.html","services.html","price.html","about.html");
-      //   for (elem of mainMenu.navList)
-      //       console.log(elem); 
-      console.log(mainMenu.wrapperA('Домашняя страница', 'Сервисы', 'Цены', 'О компании'));
-        let footerMenu=new Menu("newPage.html","checkPage.html","seoPage.html");
-      //   for (elem of footerMenu.navList)
-      //       console.log(elem);
+      
+      let mainMenu=new Menu("home.html","services.html","price.html","about.html");
+
+      // Здесь просто из интереса попробовала как это работает если сохранять в новый массив
+      let newArr=mainMenu.wrapperA('Домашняя страница', 'Сервисы', 'Цены', 'О компании');
+      console.log(newArr);
+      
+      let footerMenu=new Menu("newPage.html","checkPage.html","seoPage.html");
       console.log(footerMenu.wrapperA('Новая страница', 'Проверка страницы', 'SEO-страница'));     
 }
