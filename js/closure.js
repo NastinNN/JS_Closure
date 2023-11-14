@@ -21,3 +21,18 @@ function task2(orders) {
 
       orders.forEach(elem => showOrder.call(elem));
 }
+
+function task3 (orders) {
+      function showOrder(sale, sum) {
+            let str=`Покупателя ${this.fio} заказал ${this.tovar} на сумму ${this.price*this.quantity}. Предоставляемая скидка ${sale}%. Итоговая сумма заказа ${sum}`;
+            console.log(str);
+      }
+
+      // Решила немного разнообразить результат
+      orders.forEach(function (elem) {
+            if ((elem.price*elem.quantity)>=11000)
+                  showOrder.call(elem, 10, (elem.price*elem.quantity*0.9));
+            else
+                  showOrder.call(elem, 0, elem.price*elem.quantity);
+      });
+}
