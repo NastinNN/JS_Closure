@@ -15,7 +15,7 @@ function task1 () {
 
 function task2(orders) {
       function showOrder() {
-            let str=`Покупателя ${this.fio} заказал ${this.tovar} на сумму ${this.price*this.quantity}`;
+            let str=`Покупатель ${this.fio} заказал ${this.tovar} на сумму ${this.price*this.quantity}`;
             console.log(str);
       }
 
@@ -24,7 +24,7 @@ function task2(orders) {
 
 function task3 (orders) {
       function showOrder(sale, sum) {
-            let str=`Покупателя ${this.fio} заказал ${this.tovar} на сумму ${this.price*this.quantity}. Предоставляемая скидка ${sale}%. Итоговая сумма заказа ${sum}`;
+            let str=`Покупатель ${this.fio} заказал ${this.tovar} на сумму ${this.price*this.quantity}. Предоставляемая скидка ${sale}%. Итоговая сумма заказа ${sum}`;
             console.log(str);
       }
 
