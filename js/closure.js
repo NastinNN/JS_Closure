@@ -29,10 +29,28 @@ function task3 (orders) {
       }
 
       // Решила немного разнообразить результат
+      let sale;
       orders.forEach(function (elem) {
             if ((elem.price*elem.quantity)>=11000)
                   showOrder.call(elem, 10, (elem.price*elem.quantity*0.9));
             else
                   showOrder.call(elem, 0, elem.price*elem.quantity);
       });
+}
+
+function task4 () {
+      function Menu(...navList){
+            this.navList=navList;
+            this.wrapperA=function(...item){
+                return this.navList.map((elem, i)=>`<a href='${elem}'>${item[i]}</a>`);
+            }
+        }
+        let mainMenu=new Menu("home.html","services.html","price.html","about.html");
+      //   for (elem of mainMenu.navList)
+      //       console.log(elem); 
+      console.log(mainMenu.wrapperA('Домашняя страница', 'Сервисы', 'Цены', 'О компании'));
+        let footerMenu=new Menu("newPage.html","checkPage.html","seoPage.html");
+      //   for (elem of footerMenu.navList)
+      //       console.log(elem);
+      console.log(footerMenu.wrapperA('Новая страница', 'Проверка страницы', 'SEO-страница'));     
 }
